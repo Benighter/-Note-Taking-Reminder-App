@@ -131,3 +131,19 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   outline: none;
 }
+
+.note-form textarea {
+  resize: none;
+  transition: height 0.3s ease, width 0.3s ease, transform 0.3s ease;
+}
+
+.note-form textarea:not(:focus) {
+  height: 60px;
+  width: 100%;
+}
+
+.note-form textarea:focus {
+  height: 150px;
+  width: 100%;
+  transform: scale(1.05);
+}

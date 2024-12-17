@@ -19,6 +19,7 @@ export class NoteFormComponent implements OnInit {
   noteId?: string;
   showReminder = false;
   categories = ['Personal', 'Work', 'Shopping', 'Others'];
+  isFullScreen = false;
 
   constructor(
     private fb: FormBuilder,
@@ -87,5 +88,9 @@ export class NoteFormComponent implements OnInit {
 
   cancel() {
     this.router.navigate(['/note-list']);
+  }
+
+  toggleFullScreen() {
+    this.isFullScreen = !this.isFullScreen;
   }
 }
