@@ -1,13 +1,16 @@
-
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
 
 .note-card {
-  width: 15rem;
-  height: 10rem;
-  background: white;
+  width: 100%;
+  background-color: #f1f2f3;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   padding: 16px;
-  margin: 16px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -24,9 +27,10 @@
 }
 
 .note-preview {
-  color: #666;
+  color: #666666;
   margin: 0 0 16px 0;
   font-size: 0.9rem;
+  overflow: hidden;
 }
 
 .note-footer {
@@ -34,4 +38,17 @@
   justify-content: space-between;
   color: #888;
   font-size: 0.8rem;
+}
+
+/* Add responsive grid for smaller screens */
+@media screen and (max-width: 900px) {
+  .notes-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .notes-container {
+    grid-template-columns: 1fr;
+  }
 }
