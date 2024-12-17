@@ -69,3 +69,23 @@
     grid-template-columns: 1fr;
   }
 }
+
+.add-note-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #4CAF50;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.add-note-btn:hover {
+  transform: scale(1.1);
+}

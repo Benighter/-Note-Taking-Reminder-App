@@ -1,51 +1,14 @@
 <div class="notes-container">
-  <div class="note-card" (click)="openNote()">
+  <div class="note-card" *ngFor="let note of notes" (click)="openNote(note.id)">
     <div class="note-content">
-      <h3 class="note-title">Note Title</h3>
-      <p class="note-preview">This is a preview of the note content...</p>
+      <h3 class="note-title">{{note.title}}</h3>
+      <p class="note-preview">{{note.content}}</p>
       <div class="note-footer">
-        <span class="note-date">Created: 2023-12-25</span>
-        <span class="note-category">Category</span>
+        <span class="note-date">Created: {{note.createdAt | date}}</span>
+        <span class="note-category">{{note.category}}</span>
       </div>
     </div>
   </div>
-  <div class="note-card" (click)="openNote()">
-    <div class="note-content">
-      <h3 class="note-title">Note Title</h3>
-      <p class="note-preview">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis quibusdam animi rem saepe nesciunt laborum beatae velit possimus eum ut? Sint corrupti porro ex totam autem quas vero. Accusamus, accusantium?
-      Nam facilis similique fugit ducimus cum quod, odio eligendi culpa? Rerum, placeat! Quasi non voluptatibus eveniet excepturi sapiente, veniam accusantium dolor ab molestiae temporibus, magni dolores, totam saepe cum ex.
-      Dolorem omnis, deserunt accusantium voluptatum, quas tenetur perferendis veritatis quisquam nostrum sequi natus dolorum sed suscipit veniam ex magni tempore harum placeat dignissimos pariatur. Aliquid error ratione hic. Laboriosam, nisi.
-      In odit quibusdam rem sit, labore obcaecati nisi iusto quisquam magnam optio aliquid nostrum debitis et suscipit ipsum assumenda minus ex eaque error tempore doloremque sequi est doloribus harum. Suscipit.
-      Sint beatae debitis impedit reprehenderit eum sequi magnam, cum ea dolorem tempore delectus officiis dolor, necessitatibus a obcaecati quod nemo adipisci omnis? Repellat, ut expedita laborum natus enim ex nobis!
-      Eos dolor odit accusantium rem exercitationem vel, rerum eligendi blanditiis obcaecati repellendus vitae. In nam ipsa nulla numquam neque quam ab corrupti saepe nemo cum ex nihil harum, obcaecati accusantium.
-      Similique sunt amet ad saepe repudiandae provident et laborum, iusto cumque rem illum consectetur quae iure dolorem fugiat inventore iste harum quis enim esse? Corporis illo accusamus impedit voluptate esse.
-      Ex, quisquam? Similique, nam quod quasi a ea nostrum debitis? Quis id minima optio alias exercitationem natus eos nesciunt, non laborum debitis illo, veniam aliquam neque beatae assumenda. Quam, eveniet.
-      Doloremque amet adipisci exercitationem. Quas facere voluptatum tempore officia nemo dolor. Vel dolore laudantium a! Illum officiis minus voluptatibus exercitationem repellendus, unde veritatis vero perspiciatis laboriosam id debitis! Qui, fugit.
-      Nihil, aut eaque minima deleniti nostrum vel commodi culpa debitis assumenda non accusamus nemo earum placeat voluptatem pariatur sit. Reiciendis quas quasi eaque vero quibusdam autem quia ut consequuntur harum.</p>
-      <div class="note-footer">
-        <span class="note-date">Created: 2023-12-25</span>
-        <span class="note-category">Category</span>
-      </div>
-    </div>
-  </div>
-  <div class="note-card" (click)="openNote()">
-    <div class="note-content">
-      <h3 class="note-title">Note Title</h3>
-      <p class="note-preview">This is a preview of the note content...</p>
-      <div class="note-footer">
-        <span class="note-date">Created: 2023-12-25</span>
-        <span class="note-category">Category</span>
-      </div>
-    </div>
-  </div>
-  <div class="note-card" (click)="openNote()">
-    <div class="note-content">
-      <h3 class="note-title">Note Title</h3>
-      <p class="note-preview">This is a preview of the note content...</p>
-      <div class="note-footer">
-        <span class="note-date">Created: 2023-12-25</span>
-        <span class="note-category">Category</span>
-      </div>
-    </div>
-  </div>
+  <!-- Add floating action button for new note -->
+  <button class="add-note-btn" (click)="openNote()">+</button>
 </div>
