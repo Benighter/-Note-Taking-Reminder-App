@@ -1,1 +1,41 @@
-<p>register works!</p>
+<div class="register-container">
+  <form class="register-form animate-in" (ngSubmit)="onSubmit()" #registerForm="ngForm">
+    <h2>Register</h2>
+    <div class="form-group">
+      <input
+        type="text"
+        name="username"
+        [(ngModel)]="registerData.username"
+        placeholder="Username"
+        required>
+    </div>
+    <div class="form-group">
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="registerData.email"
+        placeholder="Email"
+        required>
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        name="password"
+        [(ngModel)]="registerData.password"
+        placeholder="Password"
+        required>
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        name="confirmPassword"
+        [(ngModel)]="registerData.confirmPassword"
+        placeholder="Confirm Password"
+        required>
+    </div>
+    <button type="submit" [disabled]="!registerForm.form.valid">Register</button>
+    <div class="login-link">
+      Already have an account? <a (click)="goToLogin()">Login</a>
+    </div>
+  </form>
+</div>

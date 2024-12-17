@@ -69,3 +69,7 @@
 .register-form .login-link a:hover {
   color: #6a99c2;
 }
+
+.login-link a {
+  cursor: pointer;
+}
