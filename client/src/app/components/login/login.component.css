@@ -1,0 +1,71 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #a4ccf3, #8cb3d9);
+}
+
+.login-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #8cb3d9;
+  outline: none;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #8cb3d9;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #6a99c2;
+}
+
+.login-form .register-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-form .register-link a {
+  color: #8cb3d9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-form .register-link a:hover {
+  color: #6a99c2;
+}

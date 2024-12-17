@@ -4,7 +4,11 @@
   align-items: center;
   padding: 10px;
   background-color: #a4ccf3;
-  transition: margin-left 0.5s ease;
+  transition: background-color 0.3s ease, margin-left 0.5s ease;
+}
+
+.nav:hover {
+  background-color: #8cb3d9;
 }
 
 .hamlogo {
@@ -19,6 +23,11 @@
   width: 30px;
   height: 21px;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: rotate(90deg);
 }
 
 .hamburger span {
@@ -35,6 +44,11 @@
   display: block;
   margin: 0 auto;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
 }
 
 .search input {
@@ -42,6 +56,11 @@
   padding: 10px;
   border-radius: 5px;
   border: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.search input:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .profile-logout {
@@ -53,12 +72,22 @@
 .profile i {
   font-size: 24px;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.profile i:hover {
+  color: #555;
 }
 
 .logout button {
   background: none;
   border: none;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logout button:hover {
+  color: #555;
 }
 
 .sidenav {
@@ -80,7 +109,7 @@
   font-size: 25px;
   color: #818181;
   display: block;
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
 
 .sidenav a:hover {
@@ -93,10 +122,15 @@
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  transition: color 0.3s ease;
+}
+
+.sidenav .closebtn:hover {
+  color: #f1f1f1;
 }
 
 #main {
-  transition: margin-left .5s;
+  transition: margin-left 0.5s;
 }
 
 @media screen and (max-height: 450px) {
