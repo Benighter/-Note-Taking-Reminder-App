@@ -1,0 +1,57 @@
+.nav {
+  background-color: gray ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.hamlogo {
+  display: flex;
+  align-items: center;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: #000000;
+  margin: 3px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+
+}
+
+.search input {
+  width: 30rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.profile-logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.bi-person-circle {
+  cursor: pointer;
+  font-size: 2rem;
+}
