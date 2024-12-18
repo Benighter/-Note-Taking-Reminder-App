@@ -1,18 +1,18 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-  <a routerLink="/note-list" >Notes</a>
+  <a routerLink="">Notes</a>
   <a routerLink="/notification">Reminders</a>
 </div>
 
 <div id="main">
   <div class="nav">
     <div class="hamlogo">
-      <div class="hamburger" (click)="openNav()">
+      <div class="hamburger" [ngClass]="{'hidden': isNavOpen}" (click)="openNav()">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div class="logo">
+      <div class="logo" routerLink="">
         <img src="images/appLogo.png" alt="">
       </div>
     </div>
@@ -32,5 +32,4 @@
     </div>
   </div>
 
-  <!-- Existing content of navbar.component.html -->
 </div>

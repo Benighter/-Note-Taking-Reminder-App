@@ -23,7 +23,7 @@
   width: 30px;
   height: 21px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.5s ease;
 }
 
 .hamburger:hover {
@@ -131,6 +131,11 @@
 
 #main {
   transition: margin-left 0.5s;
+}
+
+.hamburger.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media screen and (max-height: 450px) {

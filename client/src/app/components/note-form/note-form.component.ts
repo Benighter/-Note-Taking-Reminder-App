@@ -87,7 +87,7 @@ export class NoteFormComponent implements OnInit {
   }
 
   cancel() {
-    this.router.navigate(['/note-list']);
+    this.router.navigate(['']);
   }
 
   toggleFullScreen() {
