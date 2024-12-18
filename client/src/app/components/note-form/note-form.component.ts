@@ -74,7 +74,7 @@ export class NoteFormComponent implements OnInit {
         this.noteService.addNote(note);
         this.notificationService.showSuccess('Note added successfully!');
       }
-      this.router.navigate(['/note-list']);
+      this.router.navigate(['']);
     }
   }
 
@@ -82,7 +82,7 @@ export class NoteFormComponent implements OnInit {
     if (this.noteId && confirm('Are you sure you want to delete this note?')) {
       this.noteService.deleteNote(this.noteId);
       this.notificationService.showSuccess('Note deleted successfully!');
-      this.router.navigate(['/note-list']);
+      this.router.navigate(['']);
     }
   }
 

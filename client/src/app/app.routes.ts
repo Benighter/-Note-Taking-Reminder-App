@@ -10,7 +10,7 @@ export const routes: Routes = [
   {path: 'navbar', component: NavbarComponent},
   {path: 'login', component: LoginComponent },
   {path: 'register', component: RegisterComponent },
-  {path: 'note-list', component: NoteListComponent},
+  {path: '', component: NoteListComponent},
   {path: 'notification', component: NotificationComponent},
   { path: 'notes/new', component: NoteFormComponent },
   { path: 'notes/:id', component: NoteFormComponent },
