@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { NoteService } from '../../services/note.service';
 import { Note } from '../../models/note.model';
 import { DatePipe, CommonModule } from '@angular/common';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-note-list',
@@ -41,7 +42,11 @@ export class NoteListComponent implements OnInit {
     console.log(event);
   }
 
-  onDrop(event: any): void {
-    console.log(event);
-  }
+onDrop(event: any) : void {
+  const note = event.item.data;
+  const index = event.previousIndex;
+  const newIndex = event.currentIndex;
+  this.notes.splice(index, 1);
+  this.notes.splice(newIndex, 0, note);
+}
 }

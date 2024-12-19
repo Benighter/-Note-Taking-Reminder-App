@@ -1,5 +1,5 @@
 <div class="notes-container" cdkDropList (cdkDropListDropped)="onDrop($event)">
-<div class="note-card" draggable="true" *ngFor="let note of notes" (click)="openNote(note.id)" (dragstart)="onDragStart($event)" (dragover)="onDragOver($event)" (drop)="onDrop($event)">
+<div class="note-card" cdkDrag *ngFor="let note of notes" (click)="openNote(note.id)">
     <div class="note-content">
       <h3 class="note-title">{{note.title}}</h3>
       <p class="note-preview">{{note.content}}</p>
