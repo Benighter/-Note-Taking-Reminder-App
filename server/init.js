@@ -1,12 +1,12 @@
-const { Pool } = require('pg');
-const pool = require('./config/db.config');
+const mongoose = require('mongoose');
+const dbConfig = require('./config/db.config');
 
-pool.query('SELECT * FROM users', (err, res) => {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log(res.rows);
-  }
+mongoose.connect(dbConfig.url, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => {
+  console.log('Successfully connected to MongoDB');
+}).catch(err => {
+  console.error('Connection error', err);
+  process.exit();
 });
-
-pool.end();
