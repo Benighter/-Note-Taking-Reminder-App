@@ -18,13 +18,20 @@ exec('git add .', (error, stdout, stderr) => {
         return;
       }
 
-      exec('git push origin main', (error, stdout, stderr) => {
+      exec('git pull origin main --allow-unrelated-histories', (error, stdout, stderr) => {
         if (error) {
           console.error(`error: ${error}`);
           return;
         }
 
-        console.log('Changes added, committed, and pushed successfully');
+        exec('git push origin main', (error, stdout, stderr) => {
+          if (error) {
+            console.error(`error: ${error}`);
+            return;
+          }
+
+          console.log('Changes added, committed, and pushed successfully');
+        });
       });
     });
   });
