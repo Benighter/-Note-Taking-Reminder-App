@@ -1,0 +1,144 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #a4ccf3;
+  transition: background-color 0.3s ease, margin-left 0.5s ease;
+}
+
+.nav:hover {
+  background-color: #8cb3d9;
+}
+
+.hamlogo {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+.hamburger:hover {
+  transform: rotate(90deg);
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transition: 0.4s;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.search input {
+  width: 30rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.search input:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.profile-logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile i {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.profile i:hover {
+  color: #555;
+}
+
+.logout button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logout button:hover {
+  color: #555;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: width 0.5s ease;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  transition: color 0.3s ease;
+}
+
+.sidenav .closebtn:hover {
+  color: #f1f1f1;
+}
+
+#main {
+  transition: margin-left 0.5s;
+}
+
+.hamburger.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

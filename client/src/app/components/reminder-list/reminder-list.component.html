@@ -1,0 +1,13 @@
+<div *ngIf="notes.length > 0; else noReminders">
+  <h2>Reminders</h2>
+  <ul>
+    <li *ngFor="let note of notes">
+      <strong>{{ note.title }}</strong> - {{ note.description }}<br>
+      <span *ngIf="note.priority">Priority: {{ note.priority }}</span><br>
+      <span *ngIf="note.reminderDate">Reminder: {{ note.reminderDate | date:'medium' }}</span>
+    </li>
+  </ul>
+</div>
+<ng-template #noReminders>
+  <p>No reminders available.</p>
+</ng-template>
