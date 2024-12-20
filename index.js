@@ -1,12 +1,12 @@
 const { exec } = require('child_process');
 
-exec('git remote add origin https://github.com/Benighter/-Note-Taking-Reminder-App.git', (error, stdout, stderr) => {
+exec('git add .', (error, stdout, stderr) => {
   if (error) {
     console.error(`error: ${error}`);
     return;
   }
 
-  exec('git add .', (error, stdout, stderr) => {
+  exec('git branch -M main', (error, stdout, stderr) => {
     if (error) {
       console.error(`error: ${error}`);
       return;
